@@ -14,6 +14,7 @@ int main(int argc, char ** argv) {
     tm = *localtime(&t);
     printf("%d-%02d-%02d %02d:%02d:%02d : ", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
     printf("time to write one byte: %f seconds\n", write_one_byte(argv[1])); 
+    fflush(stdout);
     sleep(1);
   }
   return(0);
